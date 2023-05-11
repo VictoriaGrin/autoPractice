@@ -19,8 +19,8 @@ test.describe('Login tests', () => {
     });
 
 
-    test('Login with valid data', async ({ page }) => {
-        await loginPage.login('Tsthanna@tst.com', 'Tster_123');
+    test('Login with valid data as a user', async ({ page }) => {
+        await loginPage.login(user.email, user.password);
         //await expect(page.locator("[class='logo']")).toBeVisible;
         await expect(page).toHaveURL('http://omega-stage.qa.nolimit.school/vertical/default-dashboard');
     });

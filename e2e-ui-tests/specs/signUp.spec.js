@@ -18,7 +18,7 @@ test.describe('SingUp tests', () => {
     });
 
     test('Registration with valid data', async ({ page }) => {
-        await singUpPage.registration('qwertyy','qwer@hfghg.com','test_123');
+        await singUpPage.registration(userData.generatedFullName,userData.generatedEmail,userData.password);
         await expect.toHaveURL('http://omega-stage.qa.nolimit.school/sign-in');
     });
 })
