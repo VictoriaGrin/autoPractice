@@ -1,8 +1,10 @@
 const { test, expect, request } = require('@playwright/test');
 const { LoginPage } = require('../pages/loginPage');
+const config = require("../../playwright.config");
 const { users } = require('../../test-data/users');
 const { userData } = require('../../test-data/data');
-const config = require("../../playwright.config");
+
+const user = users[config.default.use.env].user;
 
 let loginPage;
 const env = config.default.use.env;
